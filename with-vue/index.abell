@@ -1,0 +1,22 @@
+{{
+  import { createSSRApp } from 'vue';
+  import { renderToString } from 'vue/server-renderer';
+  import App from './src/App.vue';
+
+  const app = createSSRApp(App);
+  const _html = await renderToString(app);
+}}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+  </head>
+  <body>
+    <div id="app">{{ _html }}</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
