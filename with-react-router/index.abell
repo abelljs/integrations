@@ -1,0 +1,43 @@
+{{
+  import React from 'react';
+  import ReactDOMServer from 'react-dom/server';
+  import { StaticRouter } from 'react-router-dom/server';
+  import { ServerStyleSheet } from "styled-components";
+  import App from './src/App';
+}}
+
+{{
+  /** 
+   * @declarations
+   */ 
+
+  const sheet = new ServerStyleSheet();
+  const htmlContent = ReactDOMServer.renderToString(
+    sheet.collectStyles(
+      <StaticRouter location={props.path}>
+        <App />
+      </StaticRouter>
+    )
+  );
+  const styleTags = sheet.getStyleTags();
+}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    {{ styleTags }}
+  </head>
+  <body>
+    <div id="root">{{ 
+        ReactDOMServer.renderToString(
+          <StaticRouter location={props.path}>
+            <App />
+          </StaticRouter>
+        ) 
+    }}</div>
+    <script type="module" src="/src/client.jsx"></script>
+  </body>
+</html>
