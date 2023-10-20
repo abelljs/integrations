@@ -1,7 +1,6 @@
 import React from "react"
-// import Index from './src/Index';
-// import About from './src/About';
 
+// Eagerly loads page on server and code-splits on client (similar to loadable of webpack)
 const crossEnvCodeSplit = async (importFn) => {
   if (import.meta.env.SSR) {
     return importFn().then(mod => mod.default)

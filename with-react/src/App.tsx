@@ -17,7 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
         <a href="https://abelljs.org" target="_blank">
-          <img src={abellLogo} className="logo abell" alt="Abell logo" />
+          <img src={abellLogo} width="96px" className="logo abell" alt="Abell logo" />
         </a>
       </div>
       <h1>Vite + React + Abell</h1>

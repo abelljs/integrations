@@ -17,7 +17,7 @@ function App() {
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
         <a href="https://abelljs.org" target="_blank">
-          <img src={abellLogo} class="logo abell" alt="Abell logo" />
+          <img width="96px" src={abellLogo} class="logo abell" alt="Abell logo" />
         </a>
       </div>
       <h1>Vite + Solid + Abell</h1>
