@@ -1,0 +1,16 @@
+{
+  "name": "with-bun",
+  "version": "1.0.0",
+  "description": "Abell with Bun",
+  "main": "index.abell",
+  "scripts": {
+    "dev": "bunx --bun abell dev",
+    "generate": "bunx --bun abell generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "abell": "^1.0.0-beta.4"
+  }
+}

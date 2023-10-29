@@ -1,0 +1,26 @@
+{{
+  /** @declaration */
+  const a = { values: [1, 2, 3] };
+  const b = { values: [1, 2, 3] };
+}}
+<html>
+<head>
+<title>Abell + Bun Integration</title>
+<style>
+  body {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    padding: 24px;
+  }
+
+  a {
+    color: #0a30e0;
+  }
+</style>
+</head>
+<body>
+  <!-- You can use any of the Bun utilities inside Abell block -->
+  <p>This is <a href="https://abelljs.org/">Abell</a> + <a href="https://bun.sh/">Bun</a> project running on Bun version: <b>v{{ Bun.version }}</b></p>
+  <p>Checkout <b>index.abell</b> file for more details</p>
+</body>
+</html>

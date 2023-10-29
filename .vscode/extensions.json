@@ -1,0 +1,6 @@
+{
+	// Syntax Highlighting for .abell files
+	"recommendations": [
+		"saurabh.abell-language-features"
+	],
+}
