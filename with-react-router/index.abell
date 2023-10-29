@@ -31,13 +31,7 @@
     {{ styleTags }}
   </head>
   <body>
-    <div id="root">{{ 
-        ReactDOMServer.renderToString(
-          <StaticRouter location={props.path}>
-            <App />
-          </StaticRouter>
-        ) 
-    }}</div>
+    <div id="root">{{ htmlContent }}</div>
     <script type="module" src="/src/client.jsx"></script>
   </body>
 </html>
